@@ -1,4 +1,3 @@
-
 const env = require('../.env')
 const Telegraf = require('telegraf')
 const bot = new Telegraf(env.token)
@@ -11,7 +10,7 @@ bot.start(ctx => {
 bot.command('ajuda', ctx => ctx.reply('/ajuda: vou mostrar as opções'
     + '\n/ajuda2: para testar via hears'
     + '\n/op2: Opção genérica'
-    + '\n/op3: Outra opção genérica qualquer'))
+    + '\n/op3: Outra opção genérica qualquer'));
 
 bot.hears('/ajuda2', ctx => ctx.reply('Eu também consigo capturar comandos'
     + ', mas utilize a /ajuda mesmo'))
